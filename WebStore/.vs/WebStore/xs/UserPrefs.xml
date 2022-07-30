@@ -6,10 +6,11 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Pages.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Scripts.cs">
     <Files>
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Scripts.cs" Line="19" Column="1" />
+      <File FileName="UserAndProduct.cs" Line="1" Column="1" />
+      <File FileName="Scripts.cs" Line="280" Column="1" />
       <File FileName="Pages.cs" Line="849" Column="46" />
     </Files>
     <Pads>
@@ -17,7 +18,7 @@
         <State name="__root__">
           <Node name="WebStore" expanded="True">
             <Node name="WebStore" expanded="True">
-              <Node name="Pages.cs" selected="True" />
+              <Node name="Scripts.cs" selected="True" />
             </Node>
           </Node>
         </State>
