@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i5JPZtviz3Or2uYOhrl7o8ZPpLqTZMftCX5as2s52XNvlwdNWDIctDtdUz48A3Ja/uP3up0KkoMZiwVyyFi0Xg==",
+  "dgSpecHash": "3h6SNtpxZG/tmSO+NF4nGU2ajZti2uYcnSMSvnimQbJIcj9Kg1lRD6pEXv7sxuQwMXRoW/57dYN82N0f7YfRyQ==",
   "success": true,
-  "projectFilePath": "/Users/bogdanlachinov/Desktop/C#/WebStore/WebStore.csproj",
+  "projectFilePath": "/Users/bogdanlachinov/Desktop/C#/ConsoleWebStore/WebStore/WebStore.csproj",
   "expectedPackageFiles": [
     "/Users/bogdanlachinov/.nuget/packages/consoletables/2.4.2/consoletables.2.4.2.nupkg.sha512",
     "/Users/bogdanlachinov/.nuget/packages/google.protobuf/3.19.4/google.protobuf.3.19.4.nupkg.sha512",

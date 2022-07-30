@@ -1484,11 +1484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bogdanlachinov/Desktop/C#/WebStore/WebStore.csproj",
+      "projectUniqueName": "/Users/bogdanlachinov/Desktop/C#/ConsoleWebStore/WebStore/WebStore.csproj",
       "projectName": "WebStore",
-      "projectPath": "/Users/bogdanlachinov/Desktop/C#/WebStore/WebStore.csproj",
+      "projectPath": "/Users/bogdanlachinov/Desktop/C#/ConsoleWebStore/WebStore/WebStore.csproj",
       "packagesPath": "/Users/bogdanlachinov/.nuget/packages/",
-      "outputPath": "/Users/bogdanlachinov/Desktop/C#/WebStore/obj/",
+      "outputPath": "/Users/bogdanlachinov/Desktop/C#/ConsoleWebStore/WebStore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bogdanlachinov/.nuget/NuGet/NuGet.Config"
