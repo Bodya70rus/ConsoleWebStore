@@ -7,7 +7,7 @@ namespace WebStore
     {
         static void Main(string[] args)
         {
-            Pages.StartPage();
+            Pages.HomePage();
         }
     }
 }

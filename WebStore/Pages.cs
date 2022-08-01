@@ -5,60 +5,6 @@ namespace WebStore
     {
         internal static bool lang = false; // En - false; Rus - true
 
-        internal static void StartPage()
-        {
-            Console.Clear();
-            int choise;
-
-            if (lang)
-            {
-                Console.WriteLine("Начальная страница\n");
-                Console.WriteLine("1 - Запуск\n2 - Изменить язык\n\n0 - Завершить программу\n");
-            }
-            else
-            {
-                Console.WriteLine("Start page\n");
-                Console.WriteLine("1 - Run\n2 - Change the language\n\n0 - End the program\n");
-            }
-
-            if (int.TryParse(Console.ReadLine(), out choise))
-            {
-                switch (choise)
-                {
-                    case 1:
-                        HomePage();
-                        break;
-                    case 2:
-                        LanguageSelectorPage();
-                        break;
-                    case 0:
-                        return;
-                    default:
-                        Console.Clear();
-                        if (lang)
-                            Console.WriteLine("Неверный формат ввода");
-                        else
-                            Console.WriteLine("Incorrect input format");
-                        Console.ReadLine();
-
-                        StartPage();
-
-                        break;
-                }
-            }
-            else
-            {
-                Console.Clear();
-                if (lang)
-                    Console.WriteLine("Неверный формат ввода");
-                else
-                    Console.WriteLine("Incorrect input format");
-                Console.ReadLine();
-
-                StartPage();
-            }
-        }
-
         internal static void HomePage()
         {
             Console.Clear();
@@ -67,12 +13,12 @@ namespace WebStore
             if (lang)
             {
                 Console.WriteLine("Главная страница\n");
-                Console.WriteLine("1 - Войти как администратор\n2 - Войти как пользователь\n3 - Зарегистрироваться\n\n0 - Назад\n");
+                Console.WriteLine("1 - Войти как администратор\n2 - Войти как пользователь\n3 - Зарегистрироваться\n\n4 - Изменить язык\n0 - Завершить программу\n\n");
             }
             else
             {
                 Console.WriteLine("Homepage\n");
-                Console.WriteLine("1 - Sign in as admin\n2 - Sign in as a user\n3 - Sign up\n\n0 - Back\n");
+                Console.WriteLine("1 - Sign in as admin\n2 - Sign in as a user\n3 - Sign up\n\n4 - Change the language\n0 - End the program\n");
             }
 
             if (int.TryParse(Console.ReadLine(), out choise))
@@ -88,8 +34,10 @@ namespace WebStore
                     case 3:
                         UsersRegistrationPage();
                         break;
+                    case 4:
+                        LanguageSelectorPage();
+                        break;
                     case 0:
-                        StartPage();
                         return;
                     default:
                         Console.Clear();
@@ -139,14 +87,14 @@ namespace WebStore
                 {
                     case 1:
                         lang = true;
-                        StartPage();
+                        HomePage();
                         break;
                     case 2:
                         lang = false;
-                        StartPage();
+                        HomePage();
                         break;
                     case 0:
-                        StartPage();
+                        HomePage();
                         return;
                     default:
                         Console.Clear();
