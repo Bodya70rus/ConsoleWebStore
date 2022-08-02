@@ -191,7 +191,6 @@ namespace WebStore
                 $"VALUES ('{firstName}','{lastName}','{login}','{password}')";
 
             MySqlDataReader usersReader = ConnectDB(queryUsersRegistration, true);
-
             ConnectDB(queryUsersRegistration, false);
 
             return newUser;
@@ -218,7 +217,6 @@ namespace WebStore
                 $"VALUES ('{firstName}','{lastName}','{login}','{password}')";
 
             MySqlDataReader usersReader = ConnectDB(queryUsersInserter, true);
-
             ConnectDB(queryUsersInserter, false);
         }
 
@@ -227,7 +225,6 @@ namespace WebStore
             string queryUsersDeleter = $"DELETE FROM users WHERE id = {id}";
 
             MySqlDataReader userReader = ConnectDB(queryUsersDeleter, true);
-
             ConnectDB(queryUsersDeleter, false);
         }
 
@@ -237,7 +234,6 @@ namespace WebStore
                 $"VALUES ('{title}','{info}',{cost})";
 
             MySqlDataReader productReader = ConnectDB(queryProductsInserter, true);
-
             ConnectDB(queryProductsInserter, false);
         }
 
@@ -246,7 +242,6 @@ namespace WebStore
             string queryProductsDeleter = $"DELETE FROM products WHERE id = {id}";
 
             MySqlDataReader productsReader = ConnectDB(queryProductsDeleter, true);
-
             ConnectDB(queryProductsDeleter, false);
         }
 
@@ -293,7 +288,6 @@ namespace WebStore
                 $"VALUES ('{ProductsSearcher(id).title}','{ProductsSearcher(id).info}',{id},'{user.firstName}','{user.lastName}',{GetUserId(user)})";
 
             MySqlDataReader productReader = ConnectDB(queryProductsBuyer, true);
-
             ConnectDB(queryProductsBuyer, false);
         }
 
