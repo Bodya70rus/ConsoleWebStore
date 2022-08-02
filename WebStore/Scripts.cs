@@ -36,13 +36,12 @@ namespace WebStore
                 Console.WriteLine("User table\n");
 
             string queryTableUsers = "SELECT * FROM users";
-
             ConsoleTable usersTable;
+            
             if (Pages.lang)
                 usersTable = new ConsoleTable("ID", "имя", "фамилия", "логин", "пароль");
             else
                 usersTable = new ConsoleTable("ID", "first name", "last name", "login", "password");
-
 
             MySqlDataReader usersReader = ConnectDB(queryTableUsers, true);
 
@@ -66,8 +65,8 @@ namespace WebStore
                 Console.WriteLine("Table of products\n");
 
             string queryTableProducts = "SELECT * FROM products";
-
             ConsoleTable tableForProducts;
+            
             if (Pages.lang)
                 tableForProducts = new ConsoleTable("ID", "название", "информация", "цена");
             else
@@ -95,8 +94,8 @@ namespace WebStore
                 Console.WriteLine("Purchasing history table\n");
 
             string queryTablePurchaseHistory = "SELECT * FROM purchaseHistory";
-
             ConsoleTable tableForPurchaseHistory;
+            
             if (Pages.lang)
                 tableForPurchaseHistory = new ConsoleTable("ID", "название товара",
                 "информация о товаре", "ID товара", "имя покупателя", "фамилия покупателя", "ID покупателя");
@@ -339,4 +338,3 @@ namespace WebStore
         }
     }
 }
-
