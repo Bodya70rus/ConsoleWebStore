@@ -16,6 +16,7 @@ namespace WebStore
             this.password = password;
         }
     }
+    
     internal class Product
     {
         internal string title { get; set; }
