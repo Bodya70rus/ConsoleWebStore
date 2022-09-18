@@ -1,23 +1,17 @@
 ﻿<Properties StartupConfiguration="{A1CC5A83-5C69-4FED-A451-5EBB0EDFD87F}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WebStore PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Scripts.cs">
     <Files>
       <File FileName="Program.cs" Line="10" Column="30" />
       <File FileName="UserAndProduct.cs" Line="1" Column="1" />
-      <File FileName="Pages.cs" Line="8" Column="40" />
-      <File FileName="Scripts.cs" Line="19" Column="1" />
+      <File FileName="Pages.cs" Line="13" Column="22" />
+      <File FileName="Scripts.cs" Line="104" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WebStore" expanded="True">
-            <Node name="WebStore" expanded="True">
-              <Node name="Scripts.cs" selected="True" />
-            </Node>
+            <Node name="WebStore" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -26,6 +20,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.WebStore PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

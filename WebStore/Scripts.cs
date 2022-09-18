@@ -28,6 +28,22 @@ namespace WebStore
             }
         }
 
+        internal static int TableCount(string tableName)
+        {
+            int count;
+            string queryCount = $"SELECT COUNT(*) FROM `{tableName}`";
+
+            MySqlDataReader reader = ConnectDB(queryCount, true);
+
+            reader.Read();
+
+            count = int.Parse(reader["COUNT(*)"].ToString());
+
+            ConnectDB(queryCount, false);
+
+            return count;
+        }
+
         internal static void PrintUsersTable()
         {
             if(Pages.lang)
@@ -187,8 +203,10 @@ namespace WebStore
         {
             User newUser = new User(firstName, lastName, login, password);
 
-            string queryUsersRegistration = $"INSERT INTO `users`(`firstName`, `lastName`, `login`, `password`) " +
-                $"VALUES ('{firstName}','{lastName}','{login}','{password}')";
+            int index = TableCount("users");
+
+            string queryUsersRegistration = $"INSERT INTO `users`(`id`, `firstName`, `lastName`, `login`, `password`) " +
+                $"VALUES ('{index + 1}','{firstName}','{lastName}','{login}','{password}')";
 
             MySqlDataReader usersReader = ConnectDB(queryUsersRegistration, true);
             ConnectDB(queryUsersRegistration, false);
@@ -213,8 +231,10 @@ namespace WebStore
 
         internal static void UsersInserter(string firstName, string lastName, string login, string password)
         {
-            string queryUsersInserter = $"INSERT INTO `users`(`firstName`, `lastName`, `login`, `password`) " +
-                $"VALUES ('{firstName}','{lastName}','{login}','{password}')";
+            int index = TableCount("users");
+
+            string queryUsersInserter = $"INSERT INTO `users`(`id`, `firstName`, `lastName`, `login`, `password`) " +
+                $"VALUES ('{index + 1}', '{firstName}','{lastName}','{login}','{password}')";
 
             MySqlDataReader usersReader = ConnectDB(queryUsersInserter, true);
             ConnectDB(queryUsersInserter, false);
@@ -230,8 +250,10 @@ namespace WebStore
 
         internal static void ProductsInserter(string title, string info, int cost)
         {
-            string queryProductsInserter = $"INSERT INTO `products`(`title`, `info`, `cost`) " +
-                $"VALUES ('{title}','{info}',{cost})";
+            int index = TableCount("products");
+
+            string queryProductsInserter = $"INSERT INTO `products`(`id`, `title`, `info`, `cost`) " +
+                $"VALUES ('{index + 1}', '{title}','{info}',{cost})";
 
             MySqlDataReader productReader = ConnectDB(queryProductsInserter, true);
             ConnectDB(queryProductsInserter, false);
@@ -283,9 +305,11 @@ namespace WebStore
 
         internal static void ProductsBuyer(int id, User user)
         {
+            int index = TableCount("purchaseHistory");
+
             string queryProductsBuyer = $"INSERT INTO `purchaseHistory`" +
-                $"(`productTitle`, `productInfo`, `productId`, `userFirstName`, `userLastName`, `userId`)" +
-                $"VALUES ('{ProductsSearcher(id).title}','{ProductsSearcher(id).info}',{id},'{user.firstName}','{user.lastName}',{GetUserId(user)})";
+                $"(`id`, `productTitle`, `productInfo`, `productId`, `userFirstName`, `userLastName`, `userId`)" +
+                $"VALUES ('{index + 1}', '{ProductsSearcher(id).title}','{ProductsSearcher(id).info}',{id},'{user.firstName}','{user.lastName}',{GetUserId(user)})";
 
             MySqlDataReader productReader = ConnectDB(queryProductsBuyer, true);
             ConnectDB(queryProductsBuyer, false);
